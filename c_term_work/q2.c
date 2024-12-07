@@ -32,5 +32,5 @@ int main(){
     int secondLargestElement = findSecondLargest(arr, 10);
 
     //printing second largest element
-    printf("%d", secondLargestElement);
+    printf("second largest element is %d", secondLargestElement);
 }
