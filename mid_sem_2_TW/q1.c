@@ -1,24 +1,29 @@
-// Q1. Write a c program to store N elements in 1 D array 
-// then  count and print total even and odd elements in the array.
-
 #include <stdio.h>
 
-int storeElementsInArray (int *n) {
-    
-    int *arr = (int*) malloc(*n * sizeof(int));
-    printf("enter number of elements\n");
+int main() {
+    int n;
+
+    printf("Enter the number of elements: ");
     scanf("%d", &n);
 
-    printf("enter elements\n");
-    for(int i = 0; i<n; i++){
+    int arr[n];
+    printf("Enter the elements:\n");
+    for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-    return arr;
-}
+    int even = 0, odd = 0;
 
-int main(){
-    int n;
-    storeElementsInArray(&n);
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0) {
+            even++;
+        } else {
+            odd++;
+        }
+    }
 
+    printf("Total even elements: %d\n", even);
+    printf("Total odd elements: %d\n", odd);
+
+    return 0;
 }
